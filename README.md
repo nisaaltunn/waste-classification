@@ -44,9 +44,30 @@ Model, telefonla çekilmiş 21 farklı fotoğraf üzerinde de test edilmiştir.
 - Matplotlib
 - Scikit-learn
 
-## Çalıştırma
+## Proje Yapısı
+```
+├── data_loader.py       # veri seti indirme, train/val/test ayrımı, augmentation
+├── model.py             # ResNet18 modeli
+├── train.py             # eğitim, test ve metriklerin hesaplanması
+├── app.py               # Gradio arayüzü
+├── test_my_photos.py    # kendi fotoğraflarımla test
+├── models/              # eğitilmiş model (best_model.pth)
+├── my_photos/           # telefonla çekilen test fotoğrafları (sınıf klasörleri)
+├── results/             # confusion matrix, grafikler, metrics.json, test görselleri
+└── requirements.txt
+```
+
+## Kurulum
 ```bash
 pip install -r requirements.txt
-python app.py
+```
 
+## Çalıştırma
+```bash
+python train.py          # modeli eğitir (veri seti otomatik indirilir)
+python app.py            # Gradio arayüzünü başlatır
+python test_my_photos.py # my_photos klasöründeki fotoğrafları test eder
+```
 
+Eğitilmiş model `models/best_model.pth` içinde hazır olduğu için eğitim yapmadan doğrudan
+`python app.py` ile uygulamayı çalıştırabilirsiniz. Arayüz `http://127.0.0.1:7860` adresinde açılır.
