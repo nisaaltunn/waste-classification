@@ -1,0 +1,117 @@
+{
+    "model": "ResNet18",
+    "image_size": 224,
+    "epochs": 15,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "optimizer": "AdamW",
+    "scheduler": "CosineAnnealingLR",
+    "loss_function": "CrossEntropyLoss",
+    "device": "mps",
+    "training_time_minutes": 3.9086729009946186,
+    "best_validation_accuracy": 92.34828496042216,
+    "test_accuracy": 92.89473684210526,
+    "inference_time_ms": 3.038780689239502,
+    "classification_report": {
+        "cardboard": {
+            "precision": 1.0,
+            "recall": 0.9,
+            "f1-score": 0.9473684210526315,
+            "support": 60.0
+        },
+        "glass": {
+            "precision": 0.9342105263157895,
+            "recall": 0.9342105263157895,
+            "f1-score": 0.9342105263157895,
+            "support": 76.0
+        },
+        "metal": {
+            "precision": 0.921875,
+            "recall": 0.9516129032258065,
+            "f1-score": 0.9365079365079365,
+            "support": 62.0
+        },
+        "paper": {
+            "precision": 0.8936170212765957,
+            "recall": 0.9438202247191011,
+            "f1-score": 0.9180327868852459,
+            "support": 89.0
+        },
+        "plastic": {
+            "precision": 0.9315068493150684,
+            "recall": 0.9315068493150684,
+            "f1-score": 0.9315068493150684,
+            "support": 73.0
+        },
+        "trash": {
+            "precision": 0.8947368421052632,
+            "recall": 0.85,
+            "f1-score": 0.8717948717948718,
+            "support": 20.0
+        },
+        "accuracy": 0.9289473684210526,
+        "macro avg": {
+            "precision": 0.929324373168786,
+            "recall": 0.9185250839292941,
+            "f1-score": 0.9232368986452574,
+            "support": 380.0
+        },
+        "weighted avg": {
+            "precision": 0.9304813203571638,
+            "recall": 0.9289473684210526,
+            "f1-score": 0.929069507356143,
+            "support": 380.0
+        }
+    },
+    "confusion_matrix": [
+        [
+            54,
+            1,
+            0,
+            5,
+            0,
+            0
+        ],
+        [
+            0,
+            71,
+            0,
+            1,
+            4,
+            0
+        ],
+        [
+            0,
+            3,
+            59,
+            0,
+            0,
+            0
+        ],
+        [
+            0,
+            0,
+            2,
+            84,
+            1,
+            2
+        ],
+        [
+            0,
+            1,
+            3,
+            1,
+            68,
+            0
+        ],
+        [
+            0,
+            0,
+            0,
+            3,
+            0,
+            17
+        ]
+    ]
+}
